@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Fact</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jersey+10&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        hr {
+            color: white;
+            background-color: white;
+            border-color: white;
+        }
+
+        body {
+            
+            text-align: center;
+            font-family: inter;
+        }
+
+        h2 {
+            font-size: 10em;
+            margin: 5px;
+        }
+
+        h4 {
+            font-size: 2em;
+        }
+
+        h5 {
+            font-size: 1.7em;
+        }
+
+        #fact {
+            font-size: 1.2em;
+        }
+
+        small {
+            font-size: 0.7em;
+            color: rgb(255, 255, 255);
+        }
+
+        div, footer {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            padding: 5px;
+            margin: 9px;
+            border: rgba(0, 0, 0, 0.221) solid 2px;
+            
+        }   
+
+        footer {
+            padding: 5px;
+            background-color: rgba(124, 162, 198, 0.479)
+        }
+
+        .cal {
+            text-align: center;
+            width: 70%;
+            background-color: rgba(31, 143, 223, 0.522)
+        }
+
+        #day, #date {
+            text-align: center;
+        }
+
+        .main {
+            display: flex;
+        }
+
+        .facts {
+            float: right;
+            background-color: rgba(0, 58, 112, 0.221);
+            
+        }
+
+        .title {
+            background-color: rgba(6, 104, 196, 0.547)
+        }
+
+
+
+       
+    </style>
+</head>
+<body>
+    <div class="title">
+    <h1>Daily Fact</h1>
+    </div>
+
+    <div class="main">
+    <div class="cal">
+    <h2 id="day">0</h2>
+    <h4 id="date">January 2025</h4>
+    </div>
+    
+   
+    <div class="facts">
+    <h5>Fact:</h5>
+
+        
+    <p id="fact">The fact is here, in this paragraph</p>
+    </div>
+</div>
+
+<footer>
+<p>Made By Jacalastre123</p>
+</footer>
+    
+
+    <script>
+
+        const facts = [
+            "Happy New Year, the Earth just did a full rotation around the sun!",
+            "President Nixon signed a new law that sets a maximum national speed limit!<br><br><small>https://www.history.com/this-day-in-history/january-2</small>",
+            "Did you know that the brain eats itself in a process called phogocytosis, luckily for you, it is not harmful.<br/><br/><small>https://www.sciencefocus.com/science/fun-facts</small>",
+            "Did you know that the longest fingernails are 42 feet tall and is from Diana Armstrong<br/><br/><small>https://parade.com/966564/parade/fun-facts/</small>",
+            "Did you know that German Chocolate Cake was not German but actually from Sam german!<br><br><small>https://parade.com/966564/parade/fun-facts/</small>",
+            "Did you know that that the red Santa Claus we know now came from a 1931 Coco-Cala ad.<br><br><small>https://parade.com/966564/parade/fun-facts/</small>",
+            "Did you know that President John Tyler (10th US President) was born in 1790 yet have living grandchildren!<br><br><small>https://parade.com/966564/parade/fun-facts/</small>",
+            "Octopuses actually have 3 hearts!<br><br><small>https://parade.com/966564/parade/fun-facts/</small>",
+            "Did you know that the tallest man that is still alive is 8 feet and 2.8 inches from Sultan Kosen.<br><br><small>https://parade.com/966564/parade/fun-facts/</small>",
+            "There is a place in the United States where you can be all in 4 states at once, Utah, Arizona, Colorado and New Mexico!<br><br><small>https://parade.com/966564/parade/fun-facts/</small>",
+            "Princess Diana's wedding was watched by 750 million people as 2.5 billion watched her funeral back at 1997.<br><br><small>https://parade.com/966564/parade/fun-facts/</small>",
+            "Did you know that five billion people watched the 2022 FIFA World Cup!<br><br><small>https://parade.com/966564/parade/fun-facts/</small>",
+             "Guess what is your largest organ! Is it Intestines, Brain or Lung? No, it is your Skin!<br><br><small>https://parade.com/966564/parade/fun-facts/</small>",
+              "Do you know that strengths is the longest single vow word<br><br><small>https://parade.com/966564/parade/fun-facts/</small>",
+               "Did you know that Oxyphenbetazone is the most high scoring word in the scrabble dictionary!<br><br><small></small>",
+               "Feeling old? We are closer to 2050 than 2000 now.<br><br><small></small>",
+               "What do you think is the tallest building in the world? It is the Burj Khalifa in Dubai!<br><br><small>https://parade.com/966564/parade/fun-facts/</small>",
+               "Did you know that Japan has the most earthquakes in the world?<br><br><small>https://parade.com/966564/parade/fun-facts/</small>",
+               "Did you know that one lightning bolt is actually five times hotter than the Sun's surface!<br><br><small>https://parade.com/966564/parade/fun-facts/</small>",
+               "Did you know that Cleopatra was actually Greek, not Egyptian.<br><br><small>https://parade.com/1099930/marynliles/history-facts/</small>",
+               "Back at the 1830s, Ketchup was used as medicine for an upset stomach?<br><br><small>https://parade.com/1099930/marynliles/history-facts/</small>",
+               "President Zachary taylor actually died from gastroenteritis as a result of overeatinfg cherries.<br><br><small>https://parade.com/1099930/marynliles/history-facts/</small>",
+               
+            ]
+
+    const colour = [
+        "rgb(245, 242, 99)",
+        "rgb(141, 224, 163)",
+        "rgb(232, 136, 213)",
+        "#82b9fc",
+        "#46e3dd",
+        "#8cde7a",
+        "#ebce88",
+        "#9e58727d",
+        "rgba(107, 107, 235, 0.49)",
+        "#9fbd97",
+
+
+    ]
+        const day = document.getElementById("day")
+        const date = document.getElementById("date")
+        const fact = document.getElementById("fact")
+        let dayText = new Date()
+        const daDay = Math.floor((dayText - new Date(dayText.getFullYear(), 0, 0)) / 86400000)
+         const factChooses = daDay % facts.length
+                function factChoose() {
+                   const factChooses = daDay % facts.length
+                    return facts[factChooses]
+                    }
+
+                    function bgChoose() {
+                        const factChooses = daDay % colour.length
+                         return colour[factChooses]       
+                    }
+        function produceFact() {
+                day.innerHTML = dayText.getDate()
+                date.innerHTML = `${dayText.toLocaleString(`default`, {month: 'long'})} ${dayText.getFullYear()} `
+                fact.innerHTML = factChoose()
+                document.body.style.backgroundColor = bgChoose()
+        }
+
+        produceFact()
+    </script>
+</body>
+</html>
