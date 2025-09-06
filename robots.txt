@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://jacalastre123.github.io/dailyFact/sitemap.xml
