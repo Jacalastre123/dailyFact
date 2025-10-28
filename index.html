@@ -14,6 +14,7 @@
 
         * {
             box-sizing: border-box;
+        }
         hr {
             color: white;
             background-color: white;
@@ -54,7 +55,8 @@
 
         div, footer {
             background-color: rgba(255, 255, 255, 0.3);
-            border-radius: 12px;
+            box-shadow: 2px 2px ;
+            border-radius: 90px;
             padding: 5px;
             margin: 9px;
             border: rgba(0, 0, 0, 0.221) solid 2px;
@@ -100,6 +102,8 @@
                 flex: 1 1 300px;
             }
 
+            
+
 
        
     </style>
@@ -130,7 +134,20 @@
     
 
     <script>
+		    const colour = [
+        "rgb(245, 242, 99)",
+        "rgb(141, 224, 163)",
+        "rgb(232, 136, 213)",
+        "#82b9fc",
+        "#46e3dd",
+        "#8cde7a",
+        "#ebce88",
+        "#9e58727d",
+        "rgba(107, 107, 235, 0.49)",
+        "#9fbd97",
 
+
+    ]
         const facts = [
             "Happy New Year, the Earth just did a full rotation around the sun!",
             "President Nixon signed a new law that sets a maximum national speed limit!<br><br><small>https://www.history.com/this-day-in-history/january-2</small>",
@@ -164,22 +181,59 @@
                 "Youtube Shorts was released back at Sepetember 2020!<br><br><small>https://simple.wikipedia.org/wiki/YouTube_Shorts#:~:text=YouTube%20Shorts%20was%20first%20released,entire%20world%20in%20July%202021.</small>",
                 "Do you know that the website you are on right now is made from a mix of HTML, CSS and Javascript?",
                 "HTML is actually made by Tim-Berners Lee in 1993.<br><br><small>https://www.washington.edu/accesscomputing/webd2/student/unit1/module3/html_history.html#:~:text=The%20first%20version%20of%20HTML,official%20standard%20in%20December%201999.</small>",
+				"Microsoft's Windows was not an instant success, Windows 1.0 was mixed because of it's high system requirements such as the rare mouse.",
+				"Did you know that Steve Jobs was kicked out of Apple after the faliure of the Macintosh?",
+				"Did you know that the first widespread browser was called Netscape?",
+				"As of August 2025, Windows 10 stayed at the top more than about 4 years after Windows 11's release",
+				"Do you know that Kindles once had a full on Blackberry keyboard?",
+				"Back at the Middle Ages, a Pig was executed after attacking a kid!<br><br><small>https://parade.com/1099930/marynliles/history-facts/</small>",
+				
+				"Do you know that many Japanese forces still fought against the United States after Japan's surrender in WW2",
+				"Do you know that Microsoft once tried to compete against Java with ASP.NET",
+				"Do you know that Cows are not the only Animal that can be milked, it can also be from Goats.",
+				"Do you know that some people say that there is 365.25 days in a year to account for Leap years?",
+				"One Piece Bounty Rush was released back at 2018!",
+				"Feeling old, Minecraft was released back at 2009! Did you play it?",
+				"The best selling console is the PS2 with about 160 Units<Br><br><small>https://www.thegamer.com/playstation-ps2-sold-160-million-consoles-nintendo-switch/#:~:text=PlayStation%20has%20officially%20confirmed%20the%20PS2%20sold%20160,more%20units%2C%20not%20nine%20million%2C%20to%20surpass%20it.</small>",
+				"Back then, the PS1 took the world by storm, being the first to reach 100 milion units!",
+				"The shortest War is Between Britain and Zanzibar, it lasted on 38 minutes!<br><Br><small>https://parade.com/1099930/marynliles/history-facts/</small>",
+				"The first well known Nintendo Console is the Nintendo Entertainment System!",
+				"Did you realise the Egg in Portal where in one of the computers, it shows a recipe!",
+				"Do you know that there is cables undergroud which carries electricity?",
+				"Did you know that the Treaty of Versailles involved the demillitarisation of Rhineland",
+				"Did you know that Harry Potter has movies?",
+				"Germany back at WW2 worked on a very fast rocket called the V2 by the time they made it, they were about to lose!",
+				"Did you know that Anne Frank made a diary about WW2 holocaust?",
+				"Do you know that the Macbooks back at 2015 were hated for it's easily jammed Butterfly Keyboard?",
+				"Here's a secret for desktop users, Ctrl-shift-i/Command-options-i for Mac will let you see the code and edit it!",
+				"Windows 95 was the first Windows OS to introduce the Taskbar!",
+				"On the otherhand Windows 8 was hated for removing the ordinary taskbar!",
+				"Apple Iphone 6/ Plus was known to bend and it is called bendgate!<br><br><small>https://www.forbes.com/sites/gordonkelly/2018/05/24/apple-iphone-problem-iphone-6-iphone-6-plus-bend-touchscreen/</small>",
+				"Did you know Earth was once a molten ball of lava?",
+				"Mars might acutally be habitable once!",
+				"The Wright Brothers made the first Aeroplane!",
+				"The Iphone X was the first Iphone with a notch?<Br><br><small>https://www.phonearena.com/news/First-notch-phone_id105573</small>",
+				"Barbie is the best-selling toy from Mattel!",
+				"Scrabble is actually split from two companies, Hasbro in North America and Mattel in the rest of world!",
+				"Did you know that there are stars hotter than the sun?",
+				"Do you know for a period of time, MacOS was called System?",
+				"Do you know that Windows had it's own server OS called Windows Server!",
+				"The calendar we use now is called the Gregorian Calendar!",
+				"World War 2 started after Germany's invasion of Poland!",
+				"This current King of UK is King Charles!",
+				"Do you know that there are many versions of the C programming language, it is C, C++, CSS and more!",
+				"Complementary angles go up to 90 degrees as supplementary is 180 degrees! Check jacalastre123.github.io/angleMath",
+				"Windows 1.0 is the first Windows version, made in 1984",
+                "The first Kindle is released in 2007",
+                "Microsoft actually once made an ipod, it is called Zune",
+                "Macintosh's first OS is called System 1!"
+
+			
+				
+				
             ]
 
-    const colour = [
-        "rgb(245, 242, 99)",
-        "rgb(141, 224, 163)",
-        "rgb(232, 136, 213)",
-        "#82b9fc",
-        "#46e3dd",
-        "#8cde7a",
-        "#ebce88",
-        "#9e58727d",
-        "rgba(107, 107, 235, 0.49)",
-        "#9fbd97",
 
-
-    ]
         const day = document.getElementById("day")
         const date = document.getElementById("date")
         const fact = document.getElementById("fact")
